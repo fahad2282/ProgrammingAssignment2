@@ -10,6 +10,11 @@
 ## matrix (if needed). This hardcoded matrix inverse will be overwritten once 
 ## the matrix inverse is re-computed by the function cacheSolve.
 
+## NOTE: Since inverse cannot be computed for singular matrix, please ensure
+## that the matrix entered into this function is non-singular matrix. In case
+## a singular matrix is entered, the function will throw and error instead of
+## computing inverse.
+
 makeCacheMatrix <- function(x = matrix()) {
   mi <- NULL
   set <- function(y) {
